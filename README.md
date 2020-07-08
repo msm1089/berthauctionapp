@@ -8,6 +8,6 @@ npm install && npm run client-install
 
 // Run client & server with concurrently
 npm run dev
-```
 
 // Page should open on your browser
+```

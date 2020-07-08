@@ -13,10 +13,10 @@ const AdditionalVesselDetails = () => {
   const [endDate, setEndDate] = useState(tomorrow);
 
   const [chkbxs, setChkbxs] = useState({
-    cb1: { label: 'Cars', ticked: false, qty: 0 },
-    cb2: { label: 'Comm. vehicle > 8m', ticked: false, qty: 0 },
-    cb3: { label: 'Comm. vehicle < 8m', ticked: false, qty: 0 },
-    cb4: { label: 'Caravans', ticked: false, qty: 0 },
+    cb1: { label: 'Cars', ticked: false, qty: '0' },
+    cb2: { label: 'Comm. vehicle > 8m', ticked: false, qty: '0' },
+    cb3: { label: 'Comm. vehicle < 8m', ticked: false, qty: '0' },
+    cb4: { label: 'Caravans', ticked: false, qty: '0' },
   });
 
   const onChangeCb = () => {};
@@ -42,7 +42,7 @@ const AdditionalVesselDetails = () => {
                   name={chkbxs[cb].label}
                   type="text"
                   placeholder=""
-                  value={chkbxs[cb].quantity}
+                  value={chkbxs[cb].qty}
                   onChange={onChangeQty}
                   onBlur={onBlurQty}
                   text={{ label: 'Qty:', module: 'berthSearch', error: '' }}
