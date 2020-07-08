@@ -4,6 +4,8 @@ import mongo from '../../static/mongo.png';
 import express from '../../static/express.png';
 import react from '../../static/react.png';
 import node from '../../static/node.png';
+
+import logo from '../../BigBerthaLogo.png';
 import './Landing.css';
 
 const Landing = () => (
@@ -16,18 +18,7 @@ const Landing = () => (
       <p className="text-secondary h3"> Berth Booking Application</p>
     </Row>
     <Row>
-      <Col>
-        <img src={mongo} alt="mongo" className="img-fluid" />
-      </Col>
-      <Col>
-        <img src={express} alt="express" className="img-fluid" />
-      </Col>
-      <Col>
-        <img src={react} alt="react" className="img-fluid" />
-      </Col>
-      <Col>
-        <img src={node} alt="node" className="img-fluid" />
-      </Col>
+      <img src={logo} alt='Team Logo' className="img-fluid" style={{width:"630px",height:"472px"}}/>
     </Row>
   </Container>
 );
