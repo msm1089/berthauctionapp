@@ -2,3 +2,8 @@ img {
    height: 100px;
    width: 100px;
 }
+
+#navbar_msg {
+   text-emphasis-color: grey;
+   font-weight: 100;
+}
