@@ -11,6 +11,7 @@ import SignUpPage from './containers/auth/SignUpPage';
 
 import ProgressBar from './containers/layout/ProgressBar';
 import Navbar from './containers/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import PrivateRoute from './utils/PrivateRoute';
 
@@ -71,6 +72,7 @@ const App = () => {
             {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
             <Redirect from="*" to="/" />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </Provider>
     </MuiPickersUtilsProvider>
