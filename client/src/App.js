@@ -44,7 +44,6 @@ const App = () => {
         <BrowserRouter>
           <ProgressBar />
           <Navbar />
-          <Footer />
           <Switch>
             <Route path="/" exact component={Landing} />
             <Route path="/login" component={LoginPage} />
@@ -73,6 +72,7 @@ const App = () => {
             {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
             <Redirect from="*" to="/" />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </Provider>
     </MuiPickersUtilsProvider>
