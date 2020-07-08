@@ -14,12 +14,12 @@ const Navigationbar = ({ auth, onClick }) => (
     <Link to="/vessels">
       <Navbar.Brand>
         <img
-          src="https://react-bootstrap.github.io/logo.svg"
-          style={{ height: 30, width: 30 }}
+          src="https://www.portsmouth-port.co.uk/uploads/operators/PIP-Blue.png"
+          style={{ height: 60, width: 120 }}
           className="d-inline-block align-top"
           alt=""
         />
-        {' BerthApp '}
+        <span id="navbar_msg">Portsmouth International Port - Berth Auction</span>
       </Navbar.Brand>
     </Link>
     <Nav className="ml-auto">
