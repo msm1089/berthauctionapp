@@ -14,7 +14,10 @@ import Navbar from './containers/layout/Navbar';
 import Landing from './components/layout/Landing';
 import PrivateRoute from './utils/PrivateRoute';
 
-import VesselsPage from './containers/VesselsPage';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
+
+import VesselsPage from './containers/vessels/VesselsPage';
 import ViewVesselPage from './containers/vessels/ViewVesselPage';
 import CreateVesselPage from './containers/vessels/CreateVesselPage';
 import UpdateVesselPage from './containers/vessels/UpdateVesselPage';
@@ -35,36 +38,42 @@ if (localStorage.jwtToken) {
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <ProgressBar />
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/signup" component={SignUpPage} />
-          <PrivateRoute exact path="/vessels" component={VesselsPage} />
-          <PrivateRoute
-            exact
-            path="/vessels/vessel/create"
-            component={CreateVesselPage}
-          />
-          <PrivateRoute
-            exact
-            path="/vessels/vessel/update/:id"
-            component={UpdateVesselPage}
-          />
-          <PrivateRoute
-            exact
-            path="/vessels/vessel/:id"
-            component={ViewVesselPage}
-          />
-          <PrivateRoute exact path="/search/:id" component={BerthSearchPage} />
-          {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
-          <Redirect from="*" to="/" />
-        </Switch>
-      </BrowserRouter>
-    </Provider>
+    <MuiPickersUtilsProvider utils={MomentUtils}>
+      <Provider store={store}>
+        <BrowserRouter>
+          <ProgressBar />
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Landing} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/signup" component={SignUpPage} />
+            <PrivateRoute exact path="/vessels" component={VesselsPage} />
+            <PrivateRoute
+              exact
+              path="/vessels/vessel/create"
+              component={CreateVesselPage}
+            />
+            <PrivateRoute
+              exact
+              path="/vessels/vessel/update/:id"
+              component={UpdateVesselPage}
+            />
+            <PrivateRoute
+              exact
+              path="/vessels/vessel/:id"
+              component={ViewVesselPage}
+            />
+            <PrivateRoute
+              exact
+              path="/search/:id"
+              component={BerthSearchPage}
+            />
+            {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
+            <Redirect from="*" to="/" />
+          </Switch>
+        </BrowserRouter>
+      </Provider>
+    </MuiPickersUtilsProvider>
   );
 };
 

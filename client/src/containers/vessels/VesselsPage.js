@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Vessels from '../components/user/Vessels';
-import { getVessels, getVesselsByOperator } from '../actions/vesselActions';
+import Vessels from '../../components/user/Vessels';
+import { getVessels, getVesselsByOperator } from '../../actions/vesselActions';
 
 const VesselsPage = ({
   isAuthenticated,
