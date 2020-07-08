@@ -11,6 +11,7 @@ import SignUpPage from './containers/auth/SignUpPage';
 
 import ProgressBar from './containers/layout/ProgressBar';
 import Navbar from './containers/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import PrivateRoute from './utils/PrivateRoute';
 
@@ -43,6 +44,7 @@ const App = () => {
         <BrowserRouter>
           <ProgressBar />
           <Navbar />
+          <Footer />
           <Switch>
             <Route path="/" exact component={Landing} />
             <Route path="/login" component={LoginPage} />
