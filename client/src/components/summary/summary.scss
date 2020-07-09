@@ -1,0 +1,59 @@
+@import '../../sass/styles';
+
+// ############ ListVessels #####################
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 400px));
+  grid-gap: 1em;
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+.deckStyle {
+  @include box-shadow($cardShadowInitial);
+}
+
+.deckStyle:hover {
+  @include transition(0.4s);
+  @include box-shadow($cardShadowHover);
+}
+
+// ######### Vessel ############
+
+.postCover {
+  background: $themeColor;
+  color: $light;
+}
+
+// ############# ViewVessels ##############
+
+.viewVessel {
+  overflow-wrap: break-word;
+}
+
+.vesselName {
+  color: $primaryColor;
+}
+
+.footerStyle {
+  color: $subtitleColor;
+}
+
+.styleBtn {
+  cursor: pointer;
+  @include border-radius(50% !important);
+  @include box-shadow(0px 1px 2px 1px #ccc);
+  font-weight: bold !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  padding: 8px 14px !important;
+}
+
+.styleBtn:hover {
+  @include box-shadow(2px 4px 6px 1px #ccc);
+}
+
+// #################################

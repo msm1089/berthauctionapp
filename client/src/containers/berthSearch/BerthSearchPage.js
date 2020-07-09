@@ -13,9 +13,7 @@ const BerthSearchPage = ({ isAuthenticated, match, getBooked, vessel }) => {
     setBooked(getBooked());
   }, [booked, getBooked]);
 
-  const onBerthChosen = () => {
-    console.log('You clicked Continue!');
-  };
+  const onBerthChosen = () => console.log('You clicked Continue!');
 
   // to ensure that the booked array is loaded otherwise we would make uncontrolled form access error
   const isBookedLoaded = () => {
@@ -26,7 +24,7 @@ const BerthSearchPage = ({ isAuthenticated, match, getBooked, vessel }) => {
     <>
       <AdditionalVesselDetails vessel={vessel} />
       <BerthSchedule booked={booked} />
-      <BerthSearchControls />
+      <BerthSearchControls onBerthChosen={onBerthChosen} />
     </>
   );
 };
