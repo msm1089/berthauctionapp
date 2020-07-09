@@ -9,9 +9,7 @@ import { setCurrentUser, logoutUser } from './actions/authActions';
 import LoginPage from './containers/auth/LoginPage';
 import SignUpPage from './containers/auth/SignUpPage';
 
-import ProgressBar from './containers/layout/ProgressBar';
 import Navbar from './containers/layout/Navbar';
-import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import PrivateRoute from './utils/PrivateRoute';
 
@@ -42,7 +40,6 @@ const App = () => {
     <MuiPickersUtilsProvider utils={MomentUtils}>
       <Provider store={store}>
         <BrowserRouter>
-          <ProgressBar />
           <Navbar />
           <Switch>
             <Route path="/" exact component={Landing} />
@@ -72,7 +69,6 @@ const App = () => {
             {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
             <Redirect from="*" to="/" />
           </Switch>
-          <Footer />
         </BrowserRouter>
       </Provider>
     </MuiPickersUtilsProvider>
