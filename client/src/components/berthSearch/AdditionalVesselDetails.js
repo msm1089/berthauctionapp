@@ -13,10 +13,10 @@ const AdditionalVesselDetails = () => {
   const [endDate, setEndDate] = useState(tomorrow);
 
   const [chkbxs, setChkbxs] = useState({
-    cb1: { label: 'Cars', ticked: false, qty: '0' },
-    cb2: { label: 'Comm. vehicle > 8m', ticked: false, qty: '0' },
-    cb3: { label: 'Comm. vehicle < 8m', ticked: false, qty: '0' },
-    cb4: { label: 'Caravans', ticked: false, qty: '0' },
+    cb1: { label: 'Cars'},
+    cb2: { label: 'Commercial vehicle > 6m'},
+    cb3: { label: 'Commercial vehicle =< 6m'},
+    cb4: { label: 'Caravans'},
   });
 
   const onChangeCb = () => {};
@@ -31,22 +31,16 @@ const AdditionalVesselDetails = () => {
             <Row><span class="font-weight-bold">Select your cargo types and quantities</span></Row>
             {Object.keys(chkbxs).map((cb) => (
               <div key={chkbxs[cb].label} className="mb-3">
-                <Form.Check
-                  inline
-                  label={chkbxs[cb].label}
-                  type="checkbox"
-                  onChange={onChangeCb}
-                />
                 <Input
                   inline
                   name={chkbxs[cb].label}
                   type="text"
-                  placeholder=""
-                  value={chkbxs[cb].qty}
+                  placeholder="amount"
+                  // value={chkbxs[cb].qty}
                   onChange={onChangeQty}
                   onBlur={onBlurQty}
-                  text={{ label: 'Qty:', module: 'berthSearch', error: '' }}
-                  disabled={!chkbxs[cb].ticked}
+                  text={{ label: chkbxs[cb].label, module: 'berthSearch', error: '' }}
+                  disabled={false}
                 />
               </div>
             ))}
