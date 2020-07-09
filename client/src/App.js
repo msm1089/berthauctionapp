@@ -68,7 +68,7 @@ const App = () => {
               path="/search/:id"
               component={BerthSearchPage}
             />
-            <PrivateRoute exact path="/summary/:id" component={SummaryPage} />
+            <PrivateRoute exact path="/summary" component={SummaryPage} />
             {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
             <Redirect from="*" to="/" />
           </Switch>

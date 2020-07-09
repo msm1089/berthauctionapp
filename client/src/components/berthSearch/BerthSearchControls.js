@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
-const BerthSearchControls = (onBerthChosen) => {
+const BerthSearchControls = () => {
   return (
-    <Button className="mr-2" variant="outline-success" onClick={onBerthChosen}>
-      Continue
-    </Button>
+    <Link to="/summary">
+      <Button variant="outline-light" className="mr-sm-2">
+        Book Berth
+      </Button>
+    </Link>
   );
 };
 
