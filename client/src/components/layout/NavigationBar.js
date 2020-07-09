@@ -11,17 +11,30 @@ const Navigationbar = ({ auth, onClick }) => (
     className="mb-3"
     style={{ minHeight: '4rem' }}
   >
+    <Navbar.Brand>
+      <img
+        src="https://www.portsmouth-port.co.uk/uploads/operators/PIP-Blue.png"
+        style={{ height: 60, width: 120 }}
+        className="d-inline-block align-top"
+        alt=""
+      />
+      <span id="navbar_msg">Berth Auction</span>
+    </Navbar.Brand>
     <Link to="/vessels">
-      <Navbar.Brand>
-        <img
-          src="https://www.portsmouth-port.co.uk/uploads/operators/PIP-Blue.png"
-          style={{ height: 60, width: 120 }}
-          className="d-inline-block align-top"
-          alt=""
-        />
-        <span id="navbar_msg">Portsmouth International Port - Berth Auction</span>
-      </Navbar.Brand>
+      <Button variant="outline-light" className="mr-sm-2">
+        Vessels
+      </Button>
     </Link>
+
+    <Button
+      variant="outline-light"
+      className="mr-sm-2"
+      onClick={() =>
+        (window.location.href = 'https://www.portsmouth-port.co.uk/')
+      }
+    >
+      About
+    </Button>
     <Nav className="ml-auto">
       {auth ? (
         <Link to="/logout">
