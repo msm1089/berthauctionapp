@@ -45,7 +45,7 @@ const VesselForm = ({ vessel, onChange, onBlur, loading, onSubmit }) => {
               onBlur={onBlur}
               text={{
                 module: 'vessel',
-                label: 'Length',
+                label: 'Length (meters)',
                 error: errors.length,
               }}
             />
@@ -58,7 +58,7 @@ const VesselForm = ({ vessel, onChange, onBlur, loading, onSubmit }) => {
               onBlur={onBlur}
               text={{
                 module: 'vessel',
-                label: 'Weight',
+                label: 'Weight (metric tones)',
                 error: errors.weight,
               }}
             />
@@ -71,7 +71,7 @@ const VesselForm = ({ vessel, onChange, onBlur, loading, onSubmit }) => {
               onBlur={onBlur}
               text={{
                 module: 'vessel',
-                label: 'Depth',
+                label: 'Depth (meters)',
                 error: errors.depth,
               }}
             />
