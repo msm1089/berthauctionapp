@@ -82,7 +82,7 @@ export const getBooked = () => (dispatch) => {
     })
     .catch((err) => {
       dispatch(setErrors(err.response.data));
-      dispatch(toggleVesselsLoading());
+      dispatch(toggleBookedLoading());
     });
 };
 
