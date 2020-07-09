@@ -28,7 +28,7 @@ const AdditionalVesselDetails = () => {
       <Row>
         <Col className="mx-auto">
           <Form noValidate className="p-sm-3 p-xs-1">
-            <Row>Select your cargo types and quantities</Row>
+            <Row><span class="font-weight-bold">Select your cargo types and quantities</span></Row>
             {Object.keys(chkbxs).map((cb) => (
               <div key={chkbxs[cb].label} className="mb-3">
                 <Form.Check
@@ -50,7 +50,7 @@ const AdditionalVesselDetails = () => {
                 />
               </div>
             ))}
-            <Row>What period do you need berths in?</Row>
+            <Row><span class="font-weight-bold mt-2">What period do you need berths in?</span></Row>
             <Row>
               <Col>
                 <DateTimePicker

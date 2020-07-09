@@ -33,10 +33,18 @@ const BerthSearchPage = ({ isAuthenticated, match, vessel }) => {
   };
 
   return (
-    <>
-      <AdditionalVesselDetails />
-      <BerthSchedule />
-      <BerthSearchControls />
+    <>  
+      <div class="row ml-2">
+        <div class="col-lg-3">
+          <AdditionalVesselDetails />
+          <BerthSearchControls />
+        </div>
+        <div class="col-lg-8">
+        <BerthSchedule />
+        </div>
+      </div>
+      
+      
     </>
   );
 };
