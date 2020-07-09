@@ -23,6 +23,8 @@ import UpdateVesselPage from './containers/vessels/UpdateVesselPage';
 
 import BerthSearchPage from './containers/search/BerthSearchPage';
 
+import SummaryPage from './containers/summary/SummaryPage';
+
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
   setAuthToken(token);
@@ -66,6 +68,7 @@ const App = () => {
               path="/search/:id"
               component={BerthSearchPage}
             />
+            <PrivateRoute exact path="/summary/:id" component={SummaryPage} />
             {/* <Route path="/vessels/:operator" component={VesselsPage} /> */}
             <Redirect from="*" to="/" />
           </Switch>
