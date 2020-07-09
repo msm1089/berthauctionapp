@@ -4,10 +4,9 @@ import { Button } from 'react-bootstrap';
 
 const BerthSearchControls = () => {
   return (
-    
     <Link to="/summary">
-      <Button variant="outline-light" className="mr-sm-2">
-        Book Berth
+      <Button className="mr-2" variant="outline-success">
+        Continue
       </Button>
     </Link>
   );
